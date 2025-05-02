@@ -2,99 +2,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XV Ailsa Addara</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom, #cceeff, #e6faff);
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: #00334d;
-        }
-        header {
-            background-image: url('https://wallpapers.com/images/featured-full/fondo-de-pantalla-hd-de-playa-b8sncabhuqz0gxrc.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #026072;
-            padding: 60px 20px;
-        }
-        h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        h2 {
-            font-weight: normal;
-            margin: 10px 0 20px;
-        }
-        .countdown {
-            font-size: 2em;
-            margin: 20px 0;
-        }
-        .details {
-            font-size: 1.2em;
-            margin: 30px 0;
-        }
-        .btn {
-            background-color: #0077b6;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XV Ailsa Addara</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Century Gothic', sans-serif;
+      color: #17011D;
+      text-align: center;
+      background-image: url('https://github.com/HADDAD09/invitacion-xv-ailsa/blob/main/images/onda-suave-del-oceano-azul-en-la-playa-arenosa.jpg?raw=true'); /* Reemplaza esta URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      padding: 60px 20px 30px;
+    }
+
+    .titulo-principal {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      color: #030131;
+      font-weight: bold;
+      text-shadow: 2px 2px 0px #FCF9FC;
+      margin: 0;
+    }
+
+    .nombre-quinceanera {
+      font-family: 'Century Gothic', sans-serif;
+      font-size: 2.8em;
+      color: #04013E;
+      font-weight: bold;
+      text-shadow: 1.5px 1.5px 0px #FCF9FC;
+      margin: 10px 0 40px;
+    }
+
+    .contenido {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 0 auto;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    h3 {
+      color: #080633;
+    }
+
+    .boton {
+      background-color: #080633;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .contador {
+      font-size: 1.5em;
+      color: #080633;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Mis XV A&ntilde;os</h1>
-        <h2>Ailsa Addara</h2>
-    </header>
+  <header>
+    <h1 class="titulo-principal">Mis XV A&ntilde;os</h1>
+    <h2 class="nombre-quinceanera">Ailsa Addara</h2>
+  </header>
 
-    <div class="countdown" id="countdown">Cargando contador...</div>
+  <div class="contenido">
+    <h3>&#161Est&aacute;s cordialmente invitado!</h3>
+    <p>Te esperamos el <strong>31 de mayo</strong> a las <strong>4:00 PM</strong> en el <strong>Sal&oacute;n Elite</strong>.</p>
 
-    <div class="details">
-        <p>Te espero para celebrar este d&iacute;a tan especial.</p>
-        <p><strong>Fecha:</strong> 31 de mayo</p>
-        <p><strong>Hora:</strong> 04:00 PM</p>
-        <p><strong>Lugar:</strong> Sal&oacute;n Elite</p>
-    </div>
+    <div class="contador" id="countdown"></div>
 
-    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdzV9AiG7D79tzecUyiLqbU23JxKGx_SFfdt946vdwAkhw3OA/viewform?usp=dialog" target="_blank">Confirmar asistencia</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzV9AiG7D79tzecUyiLqbU23JxKGx_SFfdt946vdwAkhw3OA/viewform?usp=dialog" target="_blank" class="boton">
+      Confirmar Asistencia
+    </a>
+  </div>
 
-    <div class="footer">
-        Esperamos contar con tu asistencia, te esperamos!!!
-    </div>
+  <script>
+    // Contador regresivo
+    const fechaEvento = new Date("May 31, 2025 16:00:00").getTime();
 
-    <script>
-        const eventDate = new Date("May 31, 2025 16:00:00").getTime();
-        const countdown = document.getElementById("countdown");
+    const countdown = setInterval(() => {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
 
-        const interval = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = eventDate - now;
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML = `Faltan ${dias} d&iacute;as, ${horas}h ${minutos}m ${segundos}s`;
 
-            if (distance > 0) {
-                countdown.innerHTML = `${days} d&iacute;as ${hours}h ${minutes}m ${seconds}s`;
-            } else {
-                clearInterval(interval);
-                countdown.innerHTML = "¡Ya comenzó la celebración!";
-            }
-        }, 1000);
-    </script>
+      if (diferencia < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "Â¡Ya comenz&oacute; la fiesta!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
