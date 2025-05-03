@@ -16,10 +16,17 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      padding: 60px 20px 30px;
+      width: 100%;
+      height: 25%; /* El encabezado ocupa el 25% */
+      padding: 20px 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
     }
 
     .titulo-principal {
@@ -37,16 +44,16 @@
       color: #04013E;
       font-weight: bold;
       text-shadow: 1.5px 1.5px 0px #FCF9FC;
-      margin: 10px 0 40px;
+      margin: 10px 0;
     }
 
     .contenido {
       background-color: rgba(255, 255, 255, 0.70);
       margin: 0 auto;
-      max-width: 790px;
-      padding: 33px 30px;
+      width: 75%; /* El contenido ocupa el 75% */
+      padding: 33px;
       border-radius: 15px;
-      max-height: 800px;
+      text-align: left;
     }
 
     h3 {
@@ -85,6 +92,16 @@
       margin-top: 20px;
     }
 
+    .qr-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .qr-container img {
+      width: 150px;
+      height: 150px;
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         color: #17011D !important;
@@ -108,13 +125,14 @@
   </header>
 
   <div class="contenido">
-    <h3>&#161Est&aacute;s cordialmente invitado!</h3>
-
-    <!-- Aquí agregamos el nombre y número de mesa -->
     <p class="nombre-invitado">Estimado(a): <strong>Sofía Ramírez</strong></p>
-    <p class="numero-mesa">Tu mesa: <strong>Mesa 5</strong></p>
+    <h3>&#161Est&aacute;s cordialmente invitado(a)!</h3>
+    <p>Te invito a celebrar conmigo este <strong>31 de mayo</strong> a las <strong>4:00 PM</strong> en el <strong>Sal&oacute;n "Elite" Comalcalco</strong>.</p>
 
-    <p>Te esperamos el <strong>31 de mayo</strong> a las <strong>4:00 PM</strong> en el <strong>Sal&oacute;n Elite</strong>.</p>
+    <div class="qr-container">
+      <p>Escanea el código QR para la ubicación:</p>
+      <img src="<a href='https://me-qr.com' border='0' style='cursor:pointer;display:block'><img src='https://storage2.me-qr.com/qr/200803028.png' alt='Create qr code for free'></a><a href='https://me-qr.com' border='0' style='cursor:default;display:none'>Create qr code for free</a>" alt="Código QR de Ubicación">
+    </div>
 
     <div class="contador" id="countdown"></div>
 
@@ -146,5 +164,6 @@
   </script>
 </body>
 </html>
+
 
 
