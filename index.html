@@ -30,6 +30,7 @@
     header {
       width: 100%;
       padding: 20px 0;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
     }
 
     .titulo-principal {
@@ -51,7 +52,7 @@
 
     /* ===== CONTENEDOR PRINCIPAL DEL MENSAJE ===== */
     .contenido {
-      background-color: rgba(255, 255, 255, 0.60); /* Fondo del cuadro de invitación */
+      background-color: rgba(255, 255, 255, 0.70); /* Fondo del cuadro de invitación */
       margin: 20px auto;
       width: 75%; /* Ocupa 75% del ancho de la pantalla */
       padding: 33px;
@@ -128,22 +129,25 @@
 
   <!-- ===== CUADRO DE INVITACIÓN ===== -->
   <div class="contenido">
+    <!-- Nombre personalizado del invitado -->
+    <p class="nombre-invitado">Estimado(a): <strong>Sofía Ramírez</strong></p>
+
     <!-- Mensaje principal -->
     <h3>&#161Est&aacute;s cordialmente invitado(a)!</h3>
-    <p>A celebrar conmigo este <strong>31 de mayo</strong> a las <strong>4:00 PM</strong><br>
+    <p>Te invito a celebrar conmigo este <strong>31 de mayo</strong> a las <strong>4:00 PM</strong><br>
     en el <strong>Sal&oacute;n "Elite", Comalcalco</strong>.</p>
 
     <!-- Código QR con la ubicación -->
     <div class="qr-container">
       <p>Escanea el c&oacute;digo QR para la ubicaci&oacute;n:</p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://goo.gl/maps/abc123&size=150x150" alt="Código QR de Ubicación">
+      <img src="https://github.com/HADDAD09/invitacion-xv-ailsa/blob/main/images/Ubicaci%C3%B3n%20_Sal%C3%B3n%20Elite_.png?raw=true" alt="Código QR de Ubicación">
     </div>
 
     <!-- Contador regresivo -->
     <div class="contador" id="countdown"></div>
 
     <!-- Botón para confirmar asistencia -->
-    <a href='https://me-qr.com' border='0' style='cursor:pointer;display:block'><img src='https://storage2.me-qr.com/qr/200803028.png' alt='Create qr code for free'></a><a href='https://me-qr.com' border='0' style='cursor:default;display:none'>Create qr code for free</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzV9AiG7D79tzecUyiLqbU23JxKGx_SFfdt946vdwAkhw3OA/viewform?usp=dialog" target="_blank" class="boton">
       Confirmar Asistencia
     </a>
   </div>
@@ -171,6 +175,7 @@
   </script>
 </body>
 </html>
+
 
 
 
