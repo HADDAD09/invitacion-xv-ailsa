@@ -10,9 +10,9 @@
       margin: 0;
       padding: 0;
       font-family: 'Century Gothic', sans-serif;
-      color: #001F3F;
+      color: #17011D;
       text-align: center;
-      background-image: url('https://github.com/HADDAD09/invitacion-xv-ailsa/blob/main/images/invitacion%20addarita.jpg?raw=true'); /* Reemplaza esta URL */
+      background-image: url('https://github.com/HADDAD09/invitacion-xv-ailsa/blob/main/images/invitacion%20addarita.jpg?raw=true');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -25,7 +25,7 @@
     .titulo-principal {
       font-family: 'Great Vibes', cursive;
       font-size: 4em;
-      color: #001F3F;
+      color: #030131;
       font-weight: bold;
       text-shadow: 2px 2px 0px #FCF9FC;
       margin: 0;
@@ -34,7 +34,7 @@
     .nombre-quinceanera {
       font-family: 'Century Gothic', sans-serif;
       font-size: 2.8em;
-      color: #001F3F;
+      color: #04013E;
       font-weight: bold;
       text-shadow: 1.5px 1.5px 0px #FCF9FC;
       margin: 10px 0 40px;
@@ -49,11 +49,25 @@
     }
 
     h3 {
+      color: #080633;
+    }
+
+    .nombre-invitado {
+      font-size: 1.3em;
       color: #001F3F;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .numero-mesa {
+      font-size: 1.2em;
+      color: #001F3F;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     .boton {
-      background-color: #001F3F;
+      background-color: #080633;
       color: white;
       border: none;
       padding: 15px 30px;
@@ -69,6 +83,21 @@
       color: #080633;
       margin-top: 20px;
     }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #17011D !important;
+        background-color: white !important;
+      }
+
+      .contenido {
+        background-color: rgba(255, 255, 255, 0.90) !important;
+      }
+
+      h3, .titulo-principal, .nombre-quinceanera, .contador {
+        color: #080633 !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -79,6 +108,11 @@
 
   <div class="contenido">
     <h3>&#161Est&aacute;s cordialmente invitado!</h3>
+
+    <!-- Aquí agregamos el nombre y número de mesa -->
+    <p class="nombre-invitado">Estimado(a): <strong>Sofía Ramírez</strong></p>
+    <p class="numero-mesa">Tu mesa: <strong>Mesa 5</strong></p>
+
     <p>Te esperamos el <strong>31 de mayo</strong> a las <strong>4:00 PM</strong> en el <strong>Sal&oacute;n Elite</strong>.</p>
 
     <div class="contador" id="countdown"></div>
@@ -111,3 +145,4 @@
   </script>
 </body>
 </html>
+
