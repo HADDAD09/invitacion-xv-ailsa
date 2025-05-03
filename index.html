@@ -4,15 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XV Ailsa Addara</title>
+
+  <!-- Fuente personalizada para el título -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
+    /* ===== ESTILOS GENERALES ===== */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Century Gothic', sans-serif;
       color: #17011D;
       text-align: center;
-      background-image: url('https://github.com/HADDAD09/invitacion-xv-ailsa/blob/main/images/invitacion%20addarita.jpg?raw=true');
+      background-image: url('https://github.com/HADDAD09/invitacion-xv-ailsa/blob/main/images/invitacion%20addarita.jpg?raw=true'); /* Fondo */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -22,10 +26,11 @@
       min-height: 100vh;
     }
 
+    /* ===== ENCABEZADO: Título y Nombre ===== */
     header {
       width: 100%;
       padding: 20px 0;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
     }
 
     .titulo-principal {
@@ -38,7 +43,6 @@
     }
 
     .nombre-quinceanera {
-      font-family: 'Century Gothic', sans-serif;
       font-size: 2.8em;
       color: #04013E;
       font-weight: bold;
@@ -46,15 +50,17 @@
       margin: 10px 0;
     }
 
+    /* ===== CONTENEDOR PRINCIPAL DEL MENSAJE ===== */
     .contenido {
-      background-color: rgba(255, 255, 255, 0.70);
+      background-color: rgba(255, 255, 255, 0.70); /* Fondo del cuadro de invitación */
       margin: 20px auto;
-      width: 75%;
+      width: 75%; /* Ocupa 75% del ancho de la pantalla */
       padding: 33px;
       border-radius: 15px;
       text-align: center;
     }
 
+    /* ===== TEXTOS DEL MENSAJE DE INVITACIÓN ===== */
     h3, p {
       text-align: center;
       margin: 10px 0;
@@ -67,6 +73,7 @@
       font-weight: bold;
     }
 
+    /* ===== BOTÓN DE CONFIRMACIÓN ===== */
     .boton {
       background-color: #080633;
       color: white;
@@ -79,12 +86,14 @@
       display: inline-block;
     }
 
+    /* ===== CONTADOR REGRESIVO ===== */
     .contador {
       font-size: 1.5em;
       color: #080633;
       margin-top: 20px;
     }
 
+    /* ===== SECCIÓN DEL CÓDIGO QR ===== */
     .qr-container {
       margin-top: 20px;
     }
@@ -94,6 +103,7 @@
       height: 150px;
     }
 
+    /* ===== COMPATIBILIDAD CON MODO OSCURO ===== */
     @media (prefers-color-scheme: dark) {
       body {
         color: #17011D !important;
@@ -111,31 +121,39 @@
   </style>
 </head>
 <body>
+  <!-- ===== ENCABEZADO: Título y Nombre ===== -->
   <header>
     <h1 class="titulo-principal">Mis XV A&ntilde;os</h1>
     <h2 class="nombre-quinceanera">Ailsa Addara</h2>
   </header>
 
+  <!-- ===== CUADRO DE INVITACIÓN ===== -->
   <div class="contenido">
+    <!-- Nombre personalizado del invitado -->
     <p class="nombre-invitado">Estimado(a): <strong>Sofía Ramírez</strong></p>
+
+    <!-- Mensaje principal -->
     <h3>&#161Est&aacute;s cordialmente invitado(a)!</h3>
     <p>Te invito a celebrar conmigo este <strong>31 de mayo</strong> a las <strong>4:00 PM</strong><br>
     en el <strong>Sal&oacute;n "Elite", Comalcalco</strong>.</p>
 
+    <!-- Código QR con la ubicación -->
     <div class="qr-container">
       <p>Escanea el c&oacute;digo QR para la ubicaci&oacute;n:</p>
       <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://goo.gl/maps/abc123&size=150x150" alt="Código QR de Ubicación">
     </div>
 
+    <!-- Contador regresivo -->
     <div class="contador" id="countdown"></div>
 
+    <!-- Botón para confirmar asistencia -->
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzV9AiG7D79tzecUyiLqbU23JxKGx_SFfdt946vdwAkhw3OA/viewform?usp=dialog" target="_blank" class="boton">
       Confirmar Asistencia
     </a>
   </div>
 
+  <!-- ===== SCRIPT DEL CONTADOR REGRESIVO ===== -->
   <script>
-    // Contador regresivo
     const fechaEvento = new Date("May 31, 2025 16:00:00").getTime();
 
     const countdown = setInterval(() => {
@@ -157,5 +175,6 @@
   </script>
 </body>
 </html>
+
 
 
